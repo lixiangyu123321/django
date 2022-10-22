@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频网站</title>
+  <style type="text/css">
+   .horizontal_ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+     }
+    .vertical_ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      border: 1px solid white;
+      border-radius:2px;
+      background-color: #f1f1f1;
+      }
+     .vertical_li{
+      border-bottom: 1px solid white;
+      border-radius:2px;
+      }
+     .vertical_li a{
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+      }
+     .vertical_li a:hover{
+     background-color: #555;
+     color: white;
+     }
+   .horizontal_li{
+     float:left;
+     }
+  .horizontal_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+  .horizontal_li a:active{
+    background-color: green;
+    }
+
+   .horizontal_li a:hover:not(.active){
+    background-color: #111;
+    }
+
+   .active{
+    background-color: #4CAF50;
+    }
+
+  .row{
+    width: 100%;
+    margin-bottom: 5px;
+    }
+   #sider1{
+    width: 20%;
+    }
+   #content{
+    width: 50%;
+    }
+   #sider2{
+    width: 20%;
+    }
+   .main{
+    float: left;
+    display: block;
+    height: 600px;
+    padding: 0;
+    margin: 22px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border: 1px solid #666;
+    border-radius:20px
+    }
+   p{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    display:bloock;
+    }
+   #designer{
+    font-size: 12px;
+    color: #111;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div id="header">
+    <div class="row">
+    <ul class="horizontal_ul">
+      <li class="horizontal_li"><a href="#home" >导航</a></li>
+      <li class="horizontal_li"><a href="#classify" >分类</a></li>
+      <li style="float:right" class="horizontal_li"><a href="#user">用户</a></li>
+      <li style="float:right" class="horizontal_li"><a href="#contact">联系</a></li>
+      <li style="float:right" class="horizontal_li"><a href="#about" class="active">关于</a></li>
+    </ul>
+    </div>
+  </div>
+  <div >
+    <div class="row">
+      <div id="sider1"  class="main" >
+        <div>
+          <p text-align="center" style="padding: 10px;margin-bottom:10px ">
+            菜单栏
+          </p>
+        </div>
+        <ul class="vertical_ul" style="padding:0; margin:0">
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+          <li class="vertical_li"><a href="#">1111</a></li>
+        </ul>
+      </div>
+      <div id="content" class="main" >这是视频播放区域</div>
+      <div id="sider2"  class="main" >这是右边区域</div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="row">
+      <div id="designer">
+        <p>
+        这是一个关于视频网站的第一次设计
+        </p>
+        <p style="float:right">
+        设计时间：2022年10月15日22点40分
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

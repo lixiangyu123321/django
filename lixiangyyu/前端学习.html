@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><!--lang为语言属性-->
+<head>
+    <meta charset="UTF-8"><!--<meta>为元数据-->
+    <title>前端学习</title>
+    <link rel="stylesheet" href="link.css"/>
+    <!--rel表示我要链接到什么类型的文件-->
+    <!--stylesheet表示样式表文件-->
+    <!--表示当前样式以css文本来规定-->
+    <style type="text/css">
+        p{
+            color:blue;
+            }
+    </style>
+    <!--选择器表示所有p标签都应用该样式-->
+</head>
+<body>
+<h1>这是一个一级标题</h1>
+<h2 style="color:red">这是一个二级标题</h2>
+<p>这是段落，每个段落自动换行</p>
+<p>这是一个段落，段落内部忽略连续空格   ，
+
+    也不会显示空行。</p>
+<p>这是一个段落内换行的标签，<br/><br/>格式是这样的。</p>
+<p>这是一个演示空格字符的段落&nbsp;&nbsp;&nbsp;共五个字符组成。</p>
+<pre><!--预留格式-->
+    for i = 1 to 10
+        print i
+    next i
+</pre>
+<p>这里演示的是行内组合<span>span</span>以便通过css样式来格式化</p>
+<!--
+<style type="text/css">
+<span{
+        color:blue;
+        font_weight:bold;
+        }
+</>style>
+-->
+<hr/><!--水平线-->
+<a href="http://www.baidu.com">图片或文字（链接到其他站点）</a><br/>
+<a href="前端学习.html">超链接还可以访问另外的html（链接到本站点的其他网页）</a>
+<img src="",alt=""/><!--src属性为路径加文件名，此为插入图片标签-->
+<div align="center">
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <LI>CSS</LI>
+        <LI>JS</LI>
+    </ol>
+</div>
+<table border="1">
+    <tr>
+        <td>data1</td>
+        <td>data2</td>
+    </tr>
+    <tr>
+        <td>data3</td>
+        <td>data4</td>
+    </tr>
+</table>
+<table border="1">
+    <tr>    <th></th>   <th>学生数</th> <th>平均成绩</th>       </tr>
+    <tr>    <td>一班</td>   <td>30</td>    <td>89</td>    </tr>
+    <tr>    <td>三班</td>   <td>35</td>    <td>85</td>    </tr>
+</table>
+<form action="数据处理网页">
+    账户：<input type="text"/>
+    <br/>
+    密码：<input type="password"/>
+    <br/>
+    姓名：
+    <input type="text" value="" name="myName"/>
+    <input type="submit" value="提交" name="submitBtn"/>
+    <input type="reset" value="重置"/>
+    <br/>
+    <input type="radio" value="值" name="名称" checked="checked"/>
+    <br/>
+    <input type="checkbox" value="1" name="music" checked="checked">
+    <br/>
+    <select>
+        <option>选线1</option>
+        <option selected="selected">选项2</option>
+    </select>
+    <br/>
+    <textarea rows="10" cols="100">
+        在这里输入内容。。。
+    </textarea>
+</form>
+</body>
+</html>
