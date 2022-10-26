@@ -1,150 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>视频网站</title>
-  <style type="text/css">
-   .horizontal_ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     background-color: #333;
-     }
-    .vertical_ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      border: 1px solid white;
-      border-radius:2px;
-      background-color: #f1f1f1;
-      }
-     .vertical_li{
-      border-bottom: 1px solid white;
-      border-radius:2px;
-      }
-     .vertical_li a{
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-      }
-     .vertical_li a:hover{
-     background-color: #555;
-     color: white;
-     }
-   .horizontal_li{
-     float:left;
-     }
-  .horizontal_li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  .horizontal_li a:active{
-    background-color: green;
-    }
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
 
-   .horizontal_li a:hover:not(.active){
-    background-color: #111;
-    }
 
-   .active{
-    background-color: #4CAF50;
-    }
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
 
-  .row{
+.header h1 {
+  font-size: 50px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.leftcolumn {
+  float: left;
+  width: 15%;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.nav1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav1 li{
+
+}
+
+.nav1 a{
+  text-decoration: none;
+  text-align: left;
+  display:block;
+  color:black;
+  padding: 5px 15px;
+}
+
+.nav1 a:hover{
+  background-color: #aaa;
+}
+
+.main{
+  float: left;
+  width: 70%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 15%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
     width: 100%;
-    margin-bottom: 5px;
-    }
-   #sider1{
-    width: 20%;
-    }
-   #content{
-    width: 50%;
-    }
-   #sider2{
-    width: 20%;
-    }
-   .main{
-    float: left;
-    display: block;
-    height: 600px;
     padding: 0;
-    margin: 22px;
-    text-align: center;
-    background-color: gray;
-    color: white;
-    border: 1px solid #666;
-    border-radius:20px
-    }
-   p{
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    display:bloock;
-    }
-   #designer{
-    font-size: 12px;
-    color: #111;
-    }
-  </style>
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-<div>
-  <div id="header">
-    <div class="row">
-    <ul class="horizontal_ul">
-      <li class="horizontal_li"><a href="#home" >导航</a></li>
-      <li class="horizontal_li"><a href="#classify" >分类</a></li>
-      <li style="float:right" class="horizontal_li"><a href="#user">用户</a></li>
-      <li style="float:right" class="horizontal_li"><a href="#contact">联系</a></li>
-      <li style="float:right" class="horizontal_li"><a href="#about" class="active">关于</a></li>
-    </ul>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 style="text-align:center">导航栏</h2>
+      <ul class="nav1">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+          <li><a href="#">11</a></li>
+      </ul>
     </div>
   </div>
-  <div >
-    <div class="row">
-      <div id="sider1"  class="main" >
-        <div>
-          <p text-align="center" style="padding: 10px;margin-bottom:10px ">
-            菜单栏
-          </p>
-        </div>
-        <ul class="vertical_ul" style="padding:0; margin:0">
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-          <li class="vertical_li"><a href="#">1111</a></li>
-        </ul>
-      </div>
-      <div id="content" class="main" >这是视频播放区域</div>
-      <div id="sider2"  class="main" >这是右边区域</div>
+
+  <div class="main">
+      <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
   </div>
-  <div id="footer">
-    <div class="row">
-      <div id="designer">
-        <p>
-        这是一个关于视频网站的第一次设计
-        </p>
-        <p style="float:right">
-        设计时间：2022年10月15日22点40分
-        </p>
-      </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
     </div>
   </div>
 </div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
 </body>
 </html>
