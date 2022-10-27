@@ -15,9 +15,12 @@ body {
 
 
 .header {
+  height:300px;
   padding: 30px;
   text-align: center;
-  background: white;
+  background: url(IMG_20210723_184301.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header h1 {
@@ -49,17 +52,39 @@ body {
 
 .leftcolumn {
   float: left;
-  width: 25%;
+  width: 15%;
   padding-right:20px;
+  padding-left:20px;
+}
+
+.nav1{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav1 a{
+  font-size:14px;
+  text-decoration: none;
+  text-align: left;
+  display:block;
+  color:black;
+  padding: 5px 15px;
+}
+
+.nav1 a:hover{
+  background-color: #aaa;
 }
 
 .main{
   float: left;
-  width: 50%;
+  width: 70%;
 }
+
 .rightcolumn {
   float: left;
-  width: 25%;
+  width: 15%;
   background-color: #f1f1f1;
   padding-left: 20px;
 }
@@ -85,6 +110,12 @@ body {
   clear: both;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 .footer {
   padding: 20px;
@@ -93,9 +124,14 @@ body {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 800px) {
+  .header{
+
+  }
+}
 
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
+  .leftcolumn, .rightcolumn, .main {
     width: 100%;
     padding: 0;
   }
@@ -118,38 +154,67 @@ body {
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" style="float:right">Link</a>
+  <a href="#">首页</a>
+  <a href="#">分类</a>
+  <a href="#">历史记录</a>
+  <a href="#" style="float:right">个人</a>
 </div>
 
 <div class="row">
+
   <div class="leftcolumn">
     <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h2 style="text-align:center">导航栏</h2>
+      <h3 style="text-align:center">第一章</h3>
+      <ul class="nav1">
+          <li><a href="#">1.两种电荷</a></li>
+          <li><a href="#">2.静电感应 电荷守恒定律</a></li>
+          <li><a href="#">3.导体，绝缘体和半导体</a></li>
+          <li><a href="#">4.物质的电结构</a></li>
+          <li><a href="#">5.库仑定律</a></li>
+          <li><a href="#">6.电场</a></li>
+          <li><a href="#">7.电场强度矢量</a></li>
+          <li><a href="#">8.电场叠加原理</a></li>
+          <li><a href="#">9.电荷的连续分布</a></li>
+          <li><a href="#">10.带电体在电场中受的力及运动</a></li>
+      </ul>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3 style="text-align:center">第二章</h3>
+      <ul class="nav1">
+          <li><a href="#">1.导体中的静电平衡条件</a></li>
+          <li><a href="#">2.电荷分布</a></li>
+          <li><a href="#">3.导体腔（腔内无带电体的情形）</a></li>
+          <li><a href="#">4.导体腔（腔内有带电体的情形）</a></li>
+          <li><a href="#">5.孤立导体的电容</a></li>
+          <li><a href="#">6.电容器以及电容</a></li>
+          <li><a href="#">7.电容器的并联，串联</a></li>
+          <li><a href="#">8.电容器储能</a></li>
+          <li><a href="#">9.电介质的极化</a></li>
+          <li><a href="#">10.极化的微观机制</a></li>
+      </ul>
     </div>
   </div>
+
   <div class="main">
       <div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
+
+      <div class="video" style="width:100%;">
+          <video width="100%" height="400" controls="controls">
+            <source src="/20211015_191211.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            <source src="movie.webm" type="video/webm" />
+            <object data="movie.mp4" width="100%" height="400">
+                 <embed src="movie.swf" width="100%" height="400" />
+  </object>
+</video>
+      </div>
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
+
     <div class="card">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
@@ -159,10 +224,11 @@ body {
     </div>
   </div>
   <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <div class="card clearfix">
+      <h2 style="text-align:center;">用户名</h2>
+      <img src="/A20210722067143473.jpg" alt="???" style="width:50px;height:50px;display:block;float:right;object-fit:cover;">
+      <p>我的强大超乎你的想象。。。</p>
+      <p>这里是个人信息的显示地方。。。</p>
     </div>
     <div class="card">
       <h3>Popular Post</h3>
