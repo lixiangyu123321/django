@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -25,12 +26,18 @@ body {
 
 .header h1 {
   font-size: 50px;
+  transition: 1s;
 }
 
+.header h1:hover{
+  font-size: 60px;
+}
 
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position:sticky;
+  top:0;
 }
 
 
@@ -52,9 +59,11 @@ body {
 
 .leftcolumn {
   float: left;
-  width: 15%;
-  padding-right:20px;
-  padding-left:20px;
+  width: 13%;
+  height: 1000px;
+  margin-right:2%;
+  padding-left:10px;
+  overflow: auto;
 }
 
 .nav1{
@@ -70,7 +79,7 @@ body {
   text-align: left;
   display:block;
   color:black;
-  padding: 5px 15px;
+  padding: 5px 10px;
 }
 
 .nav1 a:hover{
@@ -90,11 +99,10 @@ body {
 }
 
 
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.picture img{
+  border-radius:5px;
 }
+
 
 
 .card {
@@ -103,6 +111,30 @@ body {
   margin-top: 20px;
 }
 
+.picture_row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.picture_column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.picture_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.picture_column img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
 
 .row:after {
   content: "";
@@ -145,6 +177,8 @@ body {
   }
 }
 </style>
+
+
 </head>
 <body>
 
@@ -198,8 +232,12 @@ body {
 
   <div class="main">
       <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
+      <h2>视频内容</h2>
+      <h5 id="time"></h5>
+          <script>
+            var d = new Date();
+            document.getElementById("time").innerHTML =d;
+          </script>
 
       <div class="video" style="width:100%;">
           <video width="100%" height="400" controls="controls">
@@ -211,34 +249,73 @@ body {
   </object>
 </video>
       </div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>作者：lxy</p>
+      <p>银白的月光洒在地上，到处都有蟋蟀的凄切的叫声。夜的香气弥漫在空中，织成了一个柔软的网，把所有的景物都罩在里面。眼睛所接
+          触到的都是罩上这个柔软的网的东西，任是一草一木，都不是象在白天里那样地现实了，它们都有着模糊、空幻的色彩，每一样都隐藏了它的细致之点，都保守着它的秘密，使人有一种如梦如幻的感觉。</p>
     </div>
 
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <h2>相似作品</h2>
+      <h5 id="time2"></h5>
+          <script>
+            var d = new Date();
+            document.getElementById("time2").innerHTML =d;
+          </script>
+         <div class="picture_row">
+           <div class="picture_column">
+               <a href="#"><img src="/1.jpg" style="width:100%"></a>
+               <a href="#"><img src="/2.jpg" style="width:100%"></a>
+               <a href="#"><img src="/3.jpg" style="width:100%"></a>
+           </div>
+
+           <div class="picture_column">
+               <a href="#"><img src="/4.jpg" style="width:100%"></a>
+               <a href="#"><img src="/6.jpg" style="width:100%"></a>
+               <a href="#"><img src="/5.jpg" style="width:100%"></a>
+           </div>
+
+           <div class="picture_column">
+               <a href="#"><img src="/7.jpg" style="width:100%"></a>
+               <a href="#"><img src="/8.jpg" style="width:100%"></a>
+               <a href="#"><img src="/9.jpg" style="width:100%"></a>
+           </div>
+
+           <div class="picture_column">
+             <img src="/1.jpg" style="width:100%">
+             <img src="/4.jpg" style="width:100%">
+             <img src="/5.jpg" style="width:100%">
+           </div>
+         </div>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card clearfix">
       <h2 style="text-align:center;">用户名</h2>
-      <img src="/A20210722067143473.jpg" alt="???" style="width:50px;height:50px;display:block;float:right;object-fit:cover;">
+      <img src="/A20210722067143473.jpg" alt="???" style="width:50px;height:50px;display:block;float:right;object-fit:cover;border_radius:50%;">
       <p>我的强大超乎你的想象。。。</p>
       <p>这里是个人信息的显示地方。。。</p>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
+      <h3>广告</h3>
+      <div class="picture">
+          <a href="#">
+               <img src="/广告一.jpg" alt="广告一" width="100%" height="100">
+          </a>
+      </div>
+      <div class="picture">
+          <a href="#">
+              <img src="/广告二.jpg" alt="广告二" width="100%" height="100">
+          </a>
+      </div>
+      <div class="picture">
+          <a href="#">
+              <img src="/广告三.jpg" alt="广告三" width="100%" height="100">
+          </a>
+      </div>
     </div>
     <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3>关于</h3>
+      <p>其他一些本网页的内容。。。</p>
     </div>
   </div>
 </div>
